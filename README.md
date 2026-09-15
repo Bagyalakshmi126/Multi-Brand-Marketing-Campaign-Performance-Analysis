@@ -22,6 +22,9 @@ Digital marketing campaigns often involve high financial risk when allocating bu
 
 * **Zero Loss-Risk Leakage:** Achieving a $1.00$ recall on campaign losses ensures high-risk configurations are caught before spending budget.
 * **Automated Unit Economics:** Calculates real-time Click-Through Rate ($\text{CTR}$), Cost Per Click ($\text{CPC}$), Cost Per Acquisition ($\text{CPA}$), and Conversion Efficiency from raw inputs.
+
+
+
 ==========================================
 📈 REGRESSION PERFORMANCE METRICS (REVENUE)
 ==========================================
