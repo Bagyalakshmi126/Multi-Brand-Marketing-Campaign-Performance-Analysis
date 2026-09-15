@@ -22,6 +22,151 @@ Digital marketing campaigns often involve high financial risk when allocating bu
 
 * **Zero Loss-Risk Leakage:** Achieving a $1.00$ recall on campaign losses ensures high-risk configurations are caught before spending budget.
 * **Automated Unit Economics:** Calculates real-time Click-Through Rate ($\text{CTR}$), Cost Per Click ($\text{CPC}$), Cost Per Acquisition ($\text{CPA}$), and Conversion Efficiency from raw inputs.
+==========================================
+📈 REGRESSION PERFORMANCE METRICS (REVENUE)
+==========================================
+🔹 Linear Regression
+   • R² Score : 0.7889
+   • MAE      : $148,109.87
+   • RMSE     : $224,282.46
+
+🔹 Decision Tree Regressor
+   • R² Score : 0.8963
+   • MAE      : $88,892.33
+   • RMSE     : $157,192.73
+
+🔹 Random Forest Regressor
+   • R² Score : 0.9270
+   • MAE      : $74,629.56
+   • RMSE     : $131,838.11
+
+---
+# HYPERPARAMETER-TUNED RANDOM FOREST REGRESSOR
+
+🚀 Training Tuned Random Forest Regressor...
+
+==========================================
+📈 TUNED RANDOM FOREST REGRESSION METRICS
+==========================================
+  • R² Score : 0.9993
+  • MAE      : $2,341.06
+  • RMSE     : $12,734.58
+==========================================
+
+==========================================
+📊 FINAL CLASSIFICATION EVALUATION
+==========================================
+🔹 LOGISTIC REGRESSION
+  • Best Parameters : {'C': 10, 'class_weight': 'balanced'}
+  • ROC-AUC Score   : 1.0000
+
+              precision    recall  f1-score   support
+
+    Loss (0)       0.97      1.00      0.98      1663
+  Profit (1)       1.00      1.00      1.00     31670
+
+    accuracy                           1.00     33333
+   macro avg       0.99      1.00      0.99     33333
+weighted avg       1.00      1.00      1.00     33333
+
+  🧩 Confusion Matrix:
+     [[ True Loss  (TN): 1661  | False Profit (FP): 2     ]
+      [ False Loss (FN): 50    | True Profit  (TP): 31620 ]]
+
+-------------------------------------------------------
+🔹 DECISION TREE CLASSIFIER
+  • Best Parameters : {'class_weight': 'balanced', 'max_depth': 5, 'min_samples_split': 5}
+  • ROC-AUC Score   : 0.9994
+
+              precision    recall  f1-score   support
+
+    Loss (0)       1.00      1.00      1.00      1663
+  Profit (1)       1.00      1.00      1.00     31670
+
+    accuracy                           1.00     33333
+   macro avg       1.00      1.00      1.00     33333
+weighted avg       1.00      1.00      1.00     33333
+
+  🧩 Confusion Matrix:
+     [[ True Loss  (TN): 1661  | False Profit (FP): 2     ]
+      [ False Loss (FN): 4     | True Profit  (TP): 31666 ]]
+
+-------------------------------------------------------
+🔹 RANDOM FOREST CLASSIFIER
+  • Best Parameters : {'class_weight': 'balanced_subsample', 'max_depth': 8, 'n_estimators': 100}
+  • ROC-AUC Score   : 0.9994
+
+              precision    recall  f1-score   support
+
+    Loss (0)       1.00      1.00      1.00      1663
+  Profit (1)       1.00      1.00      1.00     31670
+
+    accuracy                           1.00     33333
+   macro avg       1.00      1.00      1.00     33333
+weighted avg       1.00      1.00      1.00     33333
+
+  🧩 Confusion Matrix:
+     [[ True Loss  (TN): 1659  | False Profit (FP): 4     ]
+      [ False Loss (FN): 1     | True Profit  (TP): 31669 ]]
+
+-------------------------------------------------------
+
+🚀 Training classification models on SMOTE-oversampled training data...
+
+==========================================
+📊 EVALUATION ON UNTOUCHED TEST DATA
+==========================================
+🔹 LOGISTIC REGRESSION (SMOTE)
+  • ROC-AUC Score : 1.0000
+
+              precision    recall  f1-score   support
+
+    Loss (0)       0.96      1.00      0.98      1663
+  Profit (1)       1.00      1.00      1.00     31670
+
+    accuracy                           1.00     33333
+   macro avg       0.98      1.00      0.99     33333
+weighted avg       1.00      1.00      1.00     33333
+
+  🧩 Confusion Matrix:
+     [[ True Loss  (TN): 1661  | False Profit (FP): 2     ]
+      [ False Loss (FN): 76    | True Profit  (TP): 31594 ]]
+
+-------------------------------------------------------
+🔹 DECISION TREE CLASSIFIER (SMOTE)
+  • ROC-AUC Score : 0.9991
+
+              precision    recall  f1-score   support
+
+    Loss (0)       1.00      1.00      1.00      1663
+  Profit (1)       1.00      1.00      1.00     31670
+
+    accuracy                           1.00     33333
+   macro avg       1.00      1.00      1.00     33333
+weighted avg       1.00      1.00      1.00     33333
+
+  🧩 Confusion Matrix:
+     [[ True Loss  (TN): 1660  | False Profit (FP): 3     ]
+      [ False Loss (FN): 6     | True Profit  (TP): 31664 ]]
+
+-------------------------------------------------------
+🔹 RANDOM FOREST CLASSIFIER (SMOTE)
+  • ROC-AUC Score : 0.9999
+
+              precision    recall  f1-score   support
+
+    Loss (0)       1.00      1.00      1.00      1663
+  Profit (1)       1.00      1.00      1.00     31670
+
+    accuracy                           1.00     33333
+   macro avg       1.00      1.00      1.00     33333
+weighted avg       1.00      1.00      1.00     33333
+
+  🧩 Confusion Matrix:
+     [[ True Loss  (TN): 1659  | False Profit (FP): 4     ]
+      [ False Loss (FN): 3     | True Profit  (TP): 31667 ]]
+
+-------------------------------------------------------
 
 ---
 
