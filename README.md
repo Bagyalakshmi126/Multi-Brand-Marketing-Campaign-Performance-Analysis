@@ -13,6 +13,12 @@ Digital marketing campaigns often involve high financial risk when allocating bu
 
 ---
 
+## EDA FINDINGS:
+
+1. During the Exploratory Data Analysis (EDA) phase, we identified right-skewed distributions and extreme values in financial metrics like  Revenue and Acquisition_Cost using distribution plots and box plots.
+2. However, rather than removing or truncating these extreme data points—which represented legitimate, high-budget, or viral marketing campaigns—we preserved the original dataset in full. 
+3.We relied on tree-based ensemble models (Random Forest), which are naturally invariant to monotonic feature transformations and robust against outliers, and applied StandardScaler to ensure normalized numerical ranges for training."
+
 ## 📊 Key Highlights & Metrics
 
 | Task | Selected Model | Key Metric | Benchmark Score |
